@@ -6,6 +6,9 @@ import cayenneLPP
 import machine
 from machine import Pin
 from math import pi
+import pycom
+
+pycom.heartbeat(False)
 
 lora = LoRa()
 print("DevEUI: %s" % (ubinascii.hexlify(lora.mac()).decode('ascii')))
