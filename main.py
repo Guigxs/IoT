@@ -83,7 +83,7 @@ start = time.time()
 now = start
 
 while(True):
-    if (now - start) > 60:
+    if (now - start) > 30*60:
         start = now
         lora.join(activation=LoRa.OTAA, auth=(app_eui, app_key), timeout=0)
 
